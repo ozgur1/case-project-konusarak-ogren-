@@ -35,11 +35,11 @@ using (var scope = app.Services.CreateScope())
     db.Database.EnsureCreated();
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+/* ============================================================
+   ✅ SWAGGER — PRODUCTION'DA DA AÇIK
+   ============================================================ */
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
@@ -234,7 +234,6 @@ app.MapGet("/api/conversations/of-user/{userId}", async (AppDbContext db, int us
 
 /* ============================================================
    ✅ BİR KONVOYU MESAJLARI
-   ✅ cid HATASI DÜZELTİLDİ
    ============================================================ */
 
 app.MapGet("/api/messages/conversation/{conversationId}", async (AppDbContext db, int conversationId) =>
