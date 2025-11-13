@@ -1,4 +1,4 @@
-# Konuşarak Öğren Case Projesi
+# Case Project
 Staj case projesi – duygu analizi sohbet(chat) uygulaması
 
 🚀 Projenin Genel Mimarisi
